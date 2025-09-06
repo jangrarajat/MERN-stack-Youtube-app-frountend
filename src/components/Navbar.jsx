@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Bell, CircleUser, CircleUserRound, Film, House, LogOut, Menu, Plus, Search, Settings, TvMinimalPlay } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import PhoneNavbar from './PhoneNavbar';
 
 
 function navbar() {
@@ -119,22 +120,8 @@ function navbar() {
 
 
             {/* phone bottom bar  */}
+            <PhoneNavbar/>
 
-            <div className=' fixed  flex items-center justify-evenly bottom-0 w-full h-12  md:hidden'>
-                <House />
-<Film/>
-               <div className='bg-gray-600 p-1 rounded-full'>
-                 <Plus />
-               </div>
-                 <TvMinimalPlay/>
-                <div className='flex flex-col'>
-                    <div className='w-5 h-5  rounded-full bg-pink-500  overflow-hidden' onClick={() => setUserDietalsDiv(prev => !prev)}>
-                        <img src={avatar} alt="avatar" className='w-full h-full object-cover' />
-
-                    </div>
-                    <span className='text-white font-mono text-xs'>You</span>
-                </div>
-            </div>
         </>
     )
 }
