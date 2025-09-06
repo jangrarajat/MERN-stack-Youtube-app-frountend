@@ -21,7 +21,7 @@ function PhoneNavbar() {
         <>
 
 
-            <div className=' fixed  flex items-center justify-evenly bottom-0 w-full h-12  md:hidden'>
+            <div className=' fixed z-50 bg-gray-950  flex items-center justify-evenly bottom-0 w-full h-12  md:hidden'>
                 <div className='flex flex-col justify-center items-center'>
                     <House />
                     <span className='text-white font-thin text-xs'>Home</span>
