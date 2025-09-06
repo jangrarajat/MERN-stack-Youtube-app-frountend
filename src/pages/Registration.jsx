@@ -104,20 +104,15 @@ function Registration() {
                       <img src={preview} alt="avatar" className='w-full h-full object-cover' />
                     </div>
                   </div>
-                </>) : (<>   <label htmlFor="avatar"
-
-                  className='w-24 h-24 border-2  absolute 
-               font-thin  mb-3 p-7 rounded-full right-1/2 translate-x-1/2  bottom-44 bg-gray-950
-               flex  justify-center items-center
-             border-white border-dashed'
-                >
-                  <span
-                    className='flex flex-col gap-3 justify-center items-center'
-                  >
-
-                    avatar <FaCloudUploadAlt />
-                  </span>
-                </label></>)}
+                </>) : (<>
+                  <label htmlFor="avatar" className='w-24 h-24 border-2  absolute 
+                                  font-thin  mb-3 p-7 rounded-full right-1/2 translate-x-1/2  bottom-44 bg-gray-950
+                                   flex  justify-center items-center
+                                 border-white border-dashed' >
+                    <span className='flex flex-col gap-3 justify-center items-center' >
+                      avatar <FaCloudUploadAlt />
+                    </span>
+                  </label></>)}
 
 
                 {previewCover ? (<>
