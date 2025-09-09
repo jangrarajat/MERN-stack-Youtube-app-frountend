@@ -18,11 +18,11 @@ function PageLoader() {
                             <h2 className=''></h2>
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-3 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-1 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
 
@@ -48,11 +48,11 @@ function PageLoader() {
                             <h2 className=''></h2>
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-3 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-1 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
 
@@ -78,11 +78,11 @@ function PageLoader() {
                             <h2 className=''></h2>
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-3 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-1 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
 
@@ -107,11 +107,11 @@ function PageLoader() {
                             <h2 className=''></h2>
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-3 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-1 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
 
@@ -137,11 +137,11 @@ function PageLoader() {
                             <h2 className=''></h2>
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-3 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-1 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
 
@@ -167,11 +167,11 @@ function PageLoader() {
                             <h2 className=''></h2>
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-3 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
                         <div className='w-full h-[40%] text-gray-400 flex flex-row mt-1 gap-1 md:flex-col'>
-                            <p className='text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
+                            <p className=' w-full overflow-hidden text-sm bg-gray-600 animate-pulse text-gray-600'>........................................................................................................................</p>
 
                         </div>
 
