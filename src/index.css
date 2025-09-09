@@ -43,3 +43,8 @@ body,
     display: none;
     /* Chrome, Safari */
 }
+
+input:focus{
+    outline: none;
+    border: none;
+}

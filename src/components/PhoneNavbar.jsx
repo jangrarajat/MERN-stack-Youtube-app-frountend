@@ -3,7 +3,7 @@ import { Bell, CircleUser, CircleUserRound, Film, House, LogOut, Menu, Plus, Sea
 import { useNavigate } from 'react-router-dom';
 
 function PhoneNavbar() {
-    const [avatar, setAvatar] = useState("https://i.pinimg.com/736x/e8/7a/b0/e87ab0a15b2b65662020e614f7e05ef1.jpg")
+    const [avatar, setAvatar] = useState(" ")
     const navigate = useNavigate()
 
 

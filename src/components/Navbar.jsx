@@ -34,7 +34,7 @@ function navbar() {
 
     return (
         <>
-            <div className='h-20  z-50 flex justify-between text-white items-center  px-2 md:px-10 fixed w-full'>
+            <div className= ' h-14  z-50 flex justify-between text-white items-center  px-2 md:px-10 fixed w-full'>
                 <div className='h-fit w-fit flex flex-row justify-center items-center md:gap-5'>
                     <div className=' hidden md:flex hover:bg-gray-700 p-2 rounded-full'>
                         <Menu className=' cursor-pointer' />
