@@ -24,7 +24,7 @@ function User() {
         setVideos(() => (
             videoData.map((video) => (
                 <div className='h-fit w-full  pb-2 ' key={video.id}>
-                    <div className='h-40 md:h-72 w-72     '>
+                    <div className='h-40 md:h-72 w-72  md:w-96   '>
                         <img className='w-full h-full rounded-lg md:rounded-lg' src={video.thumbnailUrl} alt="" />
                     </div>
                     <div className='w-full h-fit min-h-20  flex  rounded-lg'>
