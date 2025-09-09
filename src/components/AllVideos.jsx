@@ -7,7 +7,7 @@ import PageLoader from './PageLoader'
 
 function AllVideos() {
     const [videos, setVideos] = useState()
-    const [Loader , setLoader] = useState(false)
+    const [Loader , setLoader] = useState(true)
 
     const videoData = [
         { id: 1, avatar: "http://res.cloudinary.com/drrj8rl9n/image/upload/v1757074377/yyezhbrwmrjorxiddvs5.png", title: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit.", videoUrl: "", thumbnailUrl: "https://images.pexels.com/photos/33315262/pexels-photo-33315262.jpeg", channelName: "Sony live", view: "2.1m", publishedTime: "21 year ago", descraption: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, dignissimos doloremque. Optio praesentium, suscipit culpa unde libero dolores porro, ex dolore doloremquraesentium, suscipit culpa unde libero dolores porro, ex dolore doloremquraesentium, suscipit culpa unde libero dolores porro, ex dolore doloremque exercitationem id, nisi pariatur eos. Tempora, maiores omnis!" },
@@ -26,7 +26,7 @@ function AllVideos() {
         setVideos(() => (
             videoData.map((video) => (
                 <div className='h-fit w-full  pb-2 ' key={video.id}>
-                    <div className='h-60 w-full   '>
+                    <div className='h-60 md:h-72 w-full   '>
                         <img className='w-full h-full md:rounded-lg' src={video.thumbnailUrl} alt="" />
                     </div>
                     <div className='w-full h-fit min-h-20  flex  rounded-lg'>
@@ -69,7 +69,7 @@ function AllVideos() {
 
     return (
         <>
-            <div className='w-full h-full fixed md:p-3  grid grid-cols-1 md:grid-cols-3  md:gap-6 myDiv  top-14 md:pb-20 pb-28  '>
+            <div className='w-full h-full fixed md:p-3  grid grid-cols-1 md:grid-cols-3   sm:grid-cols-2 sm:gap-3  md:gap-6 myDiv  top-14 md:pb-20 pb-28  '>
 
                
                     {Loader ? (<><PageLoader/></>):( <>{videos}</>)}
