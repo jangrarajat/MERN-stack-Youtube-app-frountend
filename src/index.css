@@ -39,6 +39,12 @@ body,
     /* IE/Edge */
 }
 
+.myDivX{
+     scrollbar-width: none;
+-ms-overflow-style: none;
+}
+
+
 .myDiv::-webkit-scrollbar {
     display: none;
     /* Chrome, Safari */
