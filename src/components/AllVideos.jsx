@@ -1,13 +1,25 @@
-import { Dot, EllipsisVertical } from 'lucide-react'
+import { Dot, EllipsisVertical, Film, House, TvMinimalPlay } from 'lucide-react'
 import React, { use, useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import PageLoader from './PageLoader'
+import SideBar from './SideBar'
 
 
 
 
 function AllVideos() {
     const [videos, setVideos] = useState()
-    const [Loader , setLoader] = useState(false)
+    const [Loader, setLoader] = useState(false)
+    const [avatar, setAvatar] = useState(" ")
+    const navigate = useNavigate()
+
+
+    useEffect(() => {
+        let user = localStorage.getItem("user")
+        user = JSON.parse(user)
+        setAvatar(user.avatar)
+
+    }, [])
 
     const videoData = [
         { id: 1, avatar: "http://res.cloudinary.com/drrj8rl9n/image/upload/v1757074377/yyezhbrwmrjorxiddvs5.png", title: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit.", videoUrl: "", thumbnailUrl: "https://images.pexels.com/photos/33315262/pexels-photo-33315262.jpeg", channelName: "Sony live", view: "2.1m", publishedTime: "21 year ago", descraption: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, dignissimos doloremque. Optio praesentium, suscipit culpa unde libero dolores porro, ex dolore doloremquraesentium, suscipit culpa unde libero dolores porro, ex dolore doloremquraesentium, suscipit culpa unde libero dolores porro, ex dolore doloremque exercitationem id, nisi pariatur eos. Tempora, maiores omnis!" },
@@ -41,16 +53,16 @@ function AllVideos() {
                             </div>
                             <div className='w-full h-[40%] text-gray-400 flex flex-row  gap-1 md:flex-col'>
                                 <p className='text-sm'>{video.channelName}</p>
-                                <p className='flex  text-sm'><span>{video.view}</span> <Dot/><span>{video.publishedTime}</span></p>
+                                <p className='flex  text-sm'><span>{video.view}</span> <Dot /><span>{video.publishedTime}</span></p>
 
                             </div>
 
                         </div>
                         <div className='w-[8%] h-full mt-5 flex justify-center'>
-                            <div className=' hidden md:flex hover:bg-gray-700  h-full p-1 rounded-full'>
-                                <EllipsisVertical  className=' cursor-pointer' />
+                            <div className=' hidden md:flex hover:bg-gray-700   h-full p-1 rounded-full'>
+                                <EllipsisVertical className=' cursor-pointer' />
                             </div>
-                          
+
                         </div>
                     </div>
                 </div>
@@ -69,15 +81,31 @@ function AllVideos() {
 
     return (
         <>
-            <div className='w-full h-full fixed md:p-3  grid grid-cols-1 md:grid-cols-3   sm:grid-cols-2 sm:gap-3  md:gap-6 myDiv  top-14 md:pb-20 pb-28  '>
 
-               
-                    {Loader ? (<><PageLoader/></>):( <>{videos}</>)}
+            <div className='w-full h-full fixed md:p-3  flex-row    top-14 md:pb-20 pb-28  '>
 
+                <SideBar/>
+
+                <div className=' w-full md:w-[95%]  h-full md:ml-[5%]  md:p-3  grid grid-cols-1 md:grid-cols-3   sm:grid-cols-2 sm:gap-3  md:gap-6 myDiv  top-14 md:pb-20 pb-28  '>
+
+                    {Loader ? (<><PageLoader /></>) : (<>{videos}</>)}
+
+                </div>
             </div>
+
+
+
 
         </>
     )
 }
 
 export default AllVideos
+
+
+
+
+
+
+
+   

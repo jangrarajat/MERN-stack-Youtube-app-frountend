@@ -39,13 +39,13 @@ function PhoneNavbar() {
                 </div>
 
                 <div className='flex flex-col justify-center items-center'>
-                    <Link to='/user'>  
-                      <div className='w-7 h-7  rounded-full bg-pink-500  overflow-hidden'  >
-                        <img src={avatar} alt="avatar" className='w-full h-full object-cover' />
+                    <Link to='/user'>
+                        <div className='w-7 h-7  rounded-full bg-pink-500  overflow-hidden'  >
+                            <img src={avatar} alt="avatar" className='w-full h-full object-cover' />
 
-                    </div>
-                     </Link>
-                  
+                        </div>
+                    </Link>
+
                 </div>
             </div>
         </>

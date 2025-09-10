@@ -57,7 +57,7 @@ function navbar() {
                 </div>
                 <div className='flex gap-4 items-center '>
                     <Search strokeWidth={1} className=' md:hidden ' />
-                    <div className=' cursor-pointer  hidden md:flex flex-row bg-gray-800 rounded-full md:px-7 md:py-3 p-2 items-center'>    <Plus />Create</div>
+                    <div className=' cursor-pointer  hidden md:flex flex-row bg-gray-800 rounded-full md:px-7 md:py-2 p-2 items-center'>    <Plus />Create</div>
                     <div className=' hover:bg-gray-700 p-2 rounded-full cursor-pointer'><Bell /></div>
                     <div className=' hidden md:flex w-10 h-10 rounded-full bg-pink-500  overflow-hidden' onClick={() => setUserDietalsDiv(prev => !prev)}>
                         <img src={avatar} alt="avatar" className='w-full h-full object-cover' />

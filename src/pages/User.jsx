@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
 import { ChevronRight, CircleUserRound, Dot, Pencil, EllipsisVertical, Plus, Video, MoveDown, ArrowDownToLine, MessageCircleQuestionMark } from 'lucide-react'
+import SideBar from '../components/SideBar'
 
 function User() {
     const [videos, setVideos] = useState([])
@@ -24,7 +25,7 @@ function User() {
         setVideos(() => (
             videoData.map((video) => (
                 <div className='h-fit w-full  pb-2 ' key={video.id}>
-                    <div className='h-40 md:h-72 w-72  md:w-96   '>
+                    <div className='h-40  md:h-60 w-72  md:w-96   '>
                         <img className='w-full h-full rounded-lg md:rounded-lg' src={video.thumbnailUrl} alt="" />
                     </div>
                     <div className='w-full h-fit min-h-20  flex  rounded-lg'>
@@ -73,74 +74,88 @@ function User() {
     return (
         <>
             <Navbar />
-            <div className='  overflow-scroll w-full h-full fixed md:p-3   myDiv  top-14 md:pb-20 pb-28  '>
 
 
-                <div className='w-full h-32  flex'>
-                    <div className='w-[30%] h-full flex justify-end pr-4 items-center  '>
-                        <div className='  flex w-20 h-20 rounded-full   overflow-hidden ' >
-                            <img src={avatar} alt="avatar" className='w-full h-full object-cover' />
+            < div className='w-full h-full fixed md:p-3  flex-row    top-14 md:pb-20 pb-28  ' >
+
+                <SideBar/>
+
+                <div className=' w-full md:w-[95%]  h-full md:ml-[5%]  md:p-3  grid grid-cols-1 md:grid-cols-3   sm:grid-cols-2 sm:gap-3  md:gap-6 myDiv  top-14 md:pb-20 pb-28  '>
+
+
+                    <div className='  overflow-scroll w-full h-full fixed md:p-3   myDiv  top-14 md:pb-20 pb-28  '>
+
+
+                        <div className='w-full h-32  flex'>
+                            <div className='w-[30%] md:w-fit ml-4 h-full flex justify-end pr-4 items-center  '>
+                                <div className='  flex w-20 h-20 rounded-full   overflow-hidden ' >
+                                    <img src={avatar} alt="avatar" className='w-full h-full object-cover' />
+                                </div>
+                            </div>
+                            <div className='w-[70%] h-full  flex  flex-col  justify-center'>
+                                <h1 className='text-2xl font-thin'>{fullName}</h1>
+                                <p className='font-thin text-gray-400 text-sm flex'>@{userName} <span><Dot /></span> <span className='flex items-center  cursor-pointer'>view channel <ChevronRight size={16} /> </span></p>
+                            </div>
+                        </div>
+
+
+                        <div className='w-full h-10 overflow-x-scroll gap-2 myDivX flex  items-center px-2 '>
+                            <div className='bg-gray-800  p-2 rounded-full px-4 font-thin text-sm flex items-center  justify-center gap-1'><CircleUserRound size={16} /> Swich account</div>
+                            <div className='bg-gray-800  p-2 rounded-full px-4 font-thin text-sm flex items-center  justify-center gap-1'><Pencil size={16} /> Edit Profile</div>
+
+                        </div>
+
+                        <div>
+                            <div className='flex w-full justify-between px-4 mt-6'>
+                                <h1 className='font-semibold text-2xl'>
+                                    History
+                                </h1>
+                                <span className='hover:bg-gray-800 px-3 rounded-full flex justify-center items-center cursor-pointer border border-gray-400 '>
+                                    view all
+                                </span>
+                            </div>
+                            <div className='w-full min-h-56 h-fit gap-5  overflow-x-scroll myDivX flex p-2' >
+                                {videos}
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className='flex w-full justify-between px-4 mt-6'>
+                                <h1 className='font-semibold text-2xl'>
+                                    Playlists
+                                </h1>
+                                <p className='flex items-center justify-center gap-2'>
+                                    <span className=' cursor-pointer hover:bg-gray-800 rounded-full p-1'>
+                                        <Plus />
+                                    </span>
+                                    <span className='hover:bg-gray-800 px-3 rounded-full flex justify-center items-center cursor-pointer py-1 border border-gray-400'>
+                                        view all
+                                    </span>
+                                </p>
+                            </div>
+                            <div className='w-full min-h-56 h-fit gap-5  overflow-x-scroll myDivX flex p-2' >
+                                {videos}
+                            </div>
+                        </div>
+
+                        <div className='w-full h-10  flex items-center  hover:bg-gray-800  cursor-pointer'>
+                            <h1 className='px-5 flex  items-center'> <Video className='mr-4' size={20} /> <span className='font-thin text-sm'>Your videos</span></h1>
+                        </div>
+
+                        <div className='w-full h-10  flex items-center  hover:bg-gray-800 cursor-pointer  '>
+                            <h1 className='px-5 flex  items-center'> <ArrowDownToLine size={20} className='mr-4' /><span className='font-thin text-sm'>Downlaods</span></h1>
+                        </div>
+                        <hr className='mt-3 mb-3' />
+
+                        <div className='w-full h-10  flex items-center  mb-9  hover:bg-gray-800  cursor-pointer'>
+                            <h1 className='px-5 flex  items-center'> <MessageCircleQuestionMark size={20} className='mr-4' /><span className='font-thin text-sm'>Help and feedback</span></h1>
                         </div>
                     </div>
-                    <div className='w-[70%] h-full  flex  flex-col  justify-center'>
-                        <h1 className='text-2xl font-thin'>{fullName}</h1>
-                        <p className='font-thin text-gray-400 text-sm flex'>@{userName} <span><Dot /></span> <span className='flex items-center  cursor-pointer'>view channel <ChevronRight size={16} /> </span></p>
-                    </div>
-                </div>
 
-
-                <div className='w-full h-10 overflow-x-scroll gap-2 myDivX flex  items-center px-2 '>
-                    <div className='bg-gray-800  p-2 rounded-full px-4 font-thin text-sm flex items-center  justify-center gap-1'><CircleUserRound size={16} /> Swich account</div>
-                    <div className='bg-gray-800  p-2 rounded-full px-4 font-thin text-sm flex items-center  justify-center gap-1'><Pencil size={16} /> Edit Profile</div>
 
                 </div>
 
-                <div>
-                    <div className='flex w-full justify-between px-4 mt-6'>
-                        <h1 className='font-semibold text-2xl'>
-                            History
-                        </h1>
-                        <span className='hover:bg-gray-800 px-3 rounded-full flex justify-center items-center cursor-pointer border border-gray-400 '>
-                            view all
-                        </span>
-                    </div>
-                    <div className='w-full min-h-56 h-fit gap-5  overflow-x-scroll myDivX flex p-2' >
-                        {videos}
-                    </div>
-                </div>
-
-                <div>
-                    <div className='flex w-full justify-between px-4 mt-6'>
-                        <h1 className='font-semibold text-2xl'>
-                            Playlists
-                        </h1>
-                        <p className='flex items-center justify-center gap-2'>
-                            <span className=' cursor-pointer hover:bg-gray-800 rounded-full p-1'>
-                                <Plus />
-                            </span>
-                            <span className='hover:bg-gray-800 px-3 rounded-full flex justify-center items-center cursor-pointer py-1 border border-gray-400'>
-                                view all
-                            </span>
-                        </p>
-                    </div>
-                    <div className='w-full min-h-56 h-fit gap-5  overflow-x-scroll myDivX flex p-2' >
-                        {videos}
-                    </div>
-                </div>
-
-                <div className='w-full h-10  flex items-center '>
-                    <h1 className='px-5 flex  items-center'> <Video className='mr-4' size={20} /> <span className='font-thin text-sm'>Your videos</span></h1>
-                </div>
-
-                <div className='w-full h-10  flex items-center '>
-                    <h1 className='px-5 flex  items-center'> <ArrowDownToLine size={20} className='mr-4' /><span className='font-thin text-sm'>Downlaods</span></h1>
-                </div>
-                <hr className='mt-3 mb-3' />
-
-                <div className='w-full h-10  flex items-center  mb-9'>
-                    <h1 className='px-5 flex  items-center'> <MessageCircleQuestionMark size={20} className='mr-4'/><span className='font-thin text-sm'>Help and feedback</span></h1>
-                </div>
-            </div>
+            </div >
 
         </>
     )
