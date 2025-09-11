@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
-import { ChevronRight, CircleUserRound, Dot, Pencil, EllipsisVertical, Plus, Video, MoveDown, ArrowDownToLine, MessageCircleQuestionMark } from 'lucide-react'
+import { ChevronRight, CircleUserRound, Dot, Pencil, EllipsisVertical, Plus, Video, MoveDown, ArrowDownToLine, MessageCircleQuestionMark, LogOut } from 'lucide-react'
 import SideBar from '../components/SideBar'
+import { useNavigate } from 'react-router-dom';
 
 function User() {
+    const navigate = useNavigate()
     const [videos, setVideos] = useState([])
     const [avatar, setAvatar] = useState("http://res.cloudinary.com/drrj8rl9n/image/upload/v1757416315/dq169rjde1btrjrlyqtr.jpg   ")
     const [fullName, setFullName] = useState("fullName")
@@ -20,6 +22,13 @@ function User() {
         console.log(userData)
     }, [])
 
+
+      function logout() {
+        localStorage.removeItem("accessToken");
+        localStorage.removeItem("refreshToken");
+        localStorage.removeItem("user");
+        navigate('/login')
+    }
 
     useEffect(() => {
         setVideos(() => (
@@ -78,7 +87,7 @@ function User() {
 
             < div className='w-full h-full fixed md:p-3  flex-row    top-14 md:pb-20 pb-28  ' >
 
-                <SideBar/>
+                <SideBar />
 
                 <div className=' w-full md:w-[95%]  h-full md:ml-[5%]  md:p-3  grid grid-cols-1 md:grid-cols-3   sm:grid-cols-2 sm:gap-3  md:gap-6 myDiv  top-14 md:pb-20 pb-28  '>
 
@@ -147,8 +156,13 @@ function User() {
                         </div>
                         <hr className='mt-3 mb-3' />
 
-                        <div className='w-full h-10  flex items-center  mb-9  hover:bg-gray-800  cursor-pointer'>
+                        <div className='w-full h-10  flex items-center    hover:bg-gray-800  cursor-pointer'>
                             <h1 className='px-5 flex  items-center'> <MessageCircleQuestionMark size={20} className='mr-4' /><span className='font-thin text-sm'>Help and feedback</span></h1>
+
+                        </div>
+                          <hr className='mt-3 mb-3' />
+                        <div className='w-full h-10  flex items-center  mb-9  hover:bg-gray-800  cursor-pointer' onClick={logout}>
+                            <h1 className='px-5 flex  items-center'> <LogOut size={20} className='mr-4'/><span className='font-thin text-sm'>Logout</span></h1>
                         </div>
                     </div>
 

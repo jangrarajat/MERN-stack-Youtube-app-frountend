@@ -36,11 +36,9 @@ function navbar() {
     return (
         <> 
         
-            <div className= ' h-14  z-50 flex justify-between text-white items-center  px-2 md:px-10 fixed w-full'>
-                <div className='h-fit w-fit flex flex-row justify-center items-center md:gap-5'>
-                    <div className=' hidden md:flex hover:bg-gray-700 p-2 rounded-full'>
-                        <Menu className=' cursor-pointer' />
-                    </div>
+            <div className= ' h-14   flex justify-between text-white items-center  px-2 md:px-10 fixed w-full'>
+                <div className='md:ml-10 h-fit w-fit flex flex-row justify-center items-center md:gap-5'>
+                
                     <div className='w-40 h-40'>
                         <img className='h-full w-full' src="https://i.postimg.cc/SQ1y3SMR/generated-image-1.png" alt="logo" />
                     </div>
