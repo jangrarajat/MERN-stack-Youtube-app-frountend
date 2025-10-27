@@ -89,6 +89,7 @@ function User() {
 
                 <SideBar />
 
+
                 <div className=' w-full md:w-[95%]  h-full md:ml-[5%]  md:p-3  grid grid-cols-1 md:grid-cols-3   sm:grid-cols-2 sm:gap-3  md:gap-6 myDiv  top-14 md:pb-20 pb-28  '>
 
 
@@ -108,14 +109,14 @@ function User() {
                         </div>
 
 
-                        <div className='w-full h-10 overflow-x-scroll gap-2 myDivX flex  items-center px-2 '>
+                        <div className='w-full h-10 overflow-x-scroll gap-2 myDivX flex   items-center px-2 '>
                             <div className='bg-gray-800  p-2 rounded-full px-4 font-thin text-sm flex items-center  justify-center gap-1'><CircleUserRound size={16} /> Swich account</div>
                             <div className='bg-gray-800  p-2 rounded-full px-4 font-thin text-sm flex items-center  justify-center gap-1'><Pencil size={16} /> Edit Profile</div>
 
                         </div>
 
                         <div>
-                            <div className='flex w-full justify-between px-4 mt-6'>
+                            <div className='flex w-full justify-between px-4 mt-6 pr-28'>
                                 <h1 className='font-semibold text-2xl'>
                                     History
                                 </h1>
@@ -129,7 +130,7 @@ function User() {
                         </div>
 
                         <div>
-                            <div className='flex w-full justify-between px-4 mt-6'>
+                            <div className='flex w-full justify-between px-4 mt-6 pr-28'>
                                 <h1 className='font-semibold text-2xl'>
                                     Playlists
                                 </h1>
@@ -160,10 +161,8 @@ function User() {
                             <h1 className='px-5 flex  items-center'> <MessageCircleQuestionMark size={20} className='mr-4' /><span className='font-thin text-sm'>Help and feedback</span></h1>
 
                         </div>
-                          <hr className='mt-3 mb-3' />
-                        <div className='w-full h-10  flex items-center  mb-9  hover:bg-gray-800  cursor-pointer' onClick={logout}>
-                            <h1 className='px-5 flex  items-center'> <LogOut size={20} className='mr-4'/><span className='font-thin text-sm'>Logout</span></h1>
-                        </div>
+                         
+                      
                     </div>
 
 
