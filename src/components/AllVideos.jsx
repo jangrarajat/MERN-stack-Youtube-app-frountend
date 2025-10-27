@@ -3,6 +3,7 @@ import React, { use, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import PageLoader from './PageLoader'
 import SideBar from './SideBar'
+import UserDeitles from './UserDeitles'
 
 
 
@@ -85,8 +86,8 @@ function AllVideos() {
             <div className='w-full h-full fixed md:p-3  flex-row    top-14 md:pb-20 pb-28  '>
 
                 <SideBar/>
-
-                <div className=' w-full md:w-[95%]  h-full md:ml-[5%]  md:p-3  grid grid-cols-1 md:grid-cols-3   sm:grid-cols-2 sm:gap-3  md:gap-6 myDiv  top-14 md:pb-20 pb-28  '>
+              
+                <div className=' w-full md:w-[95%]   h-full md:ml-[5%]  md:p-3  grid grid-cols-1 md:grid-cols-3   sm:grid-cols-2 sm:gap-3  md:gap-6 myDiv  top-14 md:pb-20 pb-28  '>
 
                     {Loader ? (<><PageLoader /></>) : (<>{videos}</>)}
 
