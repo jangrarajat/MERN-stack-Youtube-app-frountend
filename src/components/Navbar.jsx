@@ -7,6 +7,7 @@ import UploadVideo from './UploadVideo';
 import UserDeitles from './UserDeitles';
 
 
+
 function navbar() {
     const [user, setUser] = useState(null)
     const [avatar, setAvatar] = useState("https://i.pinimg.com/736x/e8/7a/b0/e87ab0a15b2b65662020e614f7e05ef1.jpg")
@@ -38,7 +39,7 @@ function navbar() {
 
     return (
         <>
-
+      
             <div className=' h-14   flex justify-between text-white items-center  px-2 md:px-10 fixed w-full'>
                 <Link to='/dashbord'>
                     <div className='md:ml-10 h-fit w-fit flex flex-row justify-center items-center md:gap-5'>
@@ -71,7 +72,7 @@ function navbar() {
 
 
             {/* phone bottom bar  */}
-            <PhoneNavbar />
+            <PhoneNavbar setUploadVideoDiv={setUploadVideoDiv}/>
             <UserDeitles/>
              {uploadVideoDiv ? (<UploadVideo uploadVideoDiv={uploadVideoDiv} setUploadVideoDiv={setUploadVideoDiv}/>):null}
         </>

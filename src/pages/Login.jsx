@@ -23,7 +23,7 @@ function Login() {
         password: formData.password
       })
       console.log(res.data)
-      Swal.fire("Success", "Login Successfully", "success")
+     
       localStorage.setItem("accessToken", res.data.accessToken);
       localStorage.setItem("refreshToken", res.data.refreshToken);
       localStorage.setItem("user", JSON.stringify(res.data.user));

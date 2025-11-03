@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Bell, CircleUser, CircleUserRound, Film, House, LogOut, Menu, Plus, Search, Settings, TvMinimalPlay } from 'lucide-react';
+import { Bell, CircleUser, CircleUserRound, Film, House, LogOut, Menu, Plus, Search, Settings, TvMinimalPlay, Upload } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-function PhoneNavbar() {
+function PhoneNavbar({setUploadVideoDiv , }) {
     const [avatar, setAvatar] = useState(" ")
     const navigate = useNavigate()
 
@@ -30,9 +30,12 @@ function PhoneNavbar() {
                     <Film />
                 </div>
 
-                <div className='bg-gray-600 p-2 rounded-full'>
-                    <Plus />
-
+                <div className='bg-gray-600 p-2 rounded-full' onClick={()=>setUploadVideoDiv(pre=>!pre)}>
+                  <Plus />
+                  
+                  
+                   
+                    
                 </div>
                 <div className='flex flex-col justify-center items-center'>
                     <TvMinimalPlay />

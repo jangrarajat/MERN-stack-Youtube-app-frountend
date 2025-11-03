@@ -6,6 +6,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import PublicRoute from './components/PublicRoute';
 import User from './pages/User'
 import Dashbord from './pages/Dashbord';
+import VideoPage from './pages/VideoPage'
 function App() {
   return (
     <Routes>
@@ -15,6 +16,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path='/user' element={<User />} />
         <Route path='/dashbord' element={<Dashbord/>} />
+        <Route path='/watch/:id' element={<VideoPage/>}/>
       </Route>
 
       <Route element={<PublicRoute />}>

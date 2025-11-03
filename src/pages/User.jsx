@@ -23,7 +23,7 @@ function User() {
     }, [])
 
 
-      function logout() {
+    function logout() {
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
         localStorage.removeItem("user");
@@ -116,7 +116,7 @@ function User() {
                         </div>
 
                         <div>
-                            <div className='flex w-full justify-between px-4 mt-6 pr-28'>
+                            <div className='flex w-full justify-between px-4 mt-6 md:pr-28'>
                                 <h1 className='font-semibold text-2xl'>
                                     History
                                 </h1>
@@ -130,7 +130,7 @@ function User() {
                         </div>
 
                         <div>
-                            <div className='flex w-full justify-between px-4 mt-6 pr-28'>
+                            <div className='flex w-full justify-between px-4 mt-6 md:pr-28'>
                                 <h1 className='font-semibold text-2xl'>
                                     Playlists
                                 </h1>
@@ -161,8 +161,11 @@ function User() {
                             <h1 className='px-5 flex  items-center'> <MessageCircleQuestionMark size={20} className='mr-4' /><span className='font-thin text-sm'>Help and feedback</span></h1>
 
                         </div>
-                         
-                      
+
+                        <div className='w-full h-10  flex items-center    hover:bg-gray-800  cursor-pointer' onClick={logout}>
+                            <h1 className='px-5 flex  items-center'> <LogOut size={20} className='mr-4' /><span className='font-thin text-sm'>Logout</span></h1>
+
+                        </div>
                     </div>
 
 

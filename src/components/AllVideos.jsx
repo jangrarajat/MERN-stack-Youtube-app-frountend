@@ -15,7 +15,7 @@ function AllVideos() {
     const navigate = useNavigate()
 
 
-    useEffect(() => {
+  useEffect(() => {
         let user = localStorage.getItem("user")
         user = JSON.parse(user)
         setAvatar(user.avatar)
@@ -80,7 +80,7 @@ function AllVideos() {
 
 
 
-    return (
+  return (
         <>
 
             <div className='w-full h-full fixed md:p-3  flex-row    top-14 md:pb-20 pb-28  '>
@@ -91,7 +91,7 @@ function AllVideos() {
 
                     {Loader ? (<><PageLoader /></>) : (<>{videos}</>)}
 
-                </div>
+    </div>
             </div>
 
 
@@ -109,4 +109,3 @@ export default AllVideos
 
 
 
-   
