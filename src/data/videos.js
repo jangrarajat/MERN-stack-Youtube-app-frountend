@@ -1,3 +1,5 @@
+import axios from "axios";
+
 // Mock video data (replace with your backend API later)
 export const videos = [
     { id: 1, avatar: "http://res.cloudinary.com/drrj8rl9n/image/upload/v1757074377/yyezhbrwmrjorxiddvs5.png", title: "1Lorem ipsum, dolor sit amet consectetur adipisicing elit.", videoUrl: "", thumbnailUrl: "https://images.pexels.com/photos/33315262/pexels-photo-33315262.jpeg", channelName: "Sony live", view: "2.1m", publishedTime: "21 year ago", descraption: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, dignissimos doloremque. Optio praesentium, suscipit culpa unde libero dolores porro, ex dolore doloremquraesentium, suscipit culpa unde libero dolores porro, ex dolore doloremquraesentium, suscipit culpa unde libero dolores porro, ex dolore doloremque exercitationem id, nisi pariatur eos. Tempora, maiores omnis!" },
@@ -11,3 +13,27 @@ export const videos = [
     { id: 9, avatar: "http://res.cloudinary.com/drrj8rl9n/image/upload/v1757074377/yyezhbrwmrjorxiddvs5.png", title: "9Lorem ipsum, dolor sit amet consectetur adipisicing elit.", videoUrl: "", thumbnailUrl: "https://images.pexels.com/photos/1293265/pexels-photo-1293265.jpeg", channelName: "Codder", view: "7M", publishedTime: "1 year ago", descraption: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, dignissimos doloremque. Optio praesentium, suscipit culpa unde libero dolores porro, ex dolore doloremque exercitationem id, nisi pariatur eos. Tempora, maiores omnis!" },
 
 ];
+
+
+
+export const getAllVideo = async (page) => {
+    try {
+        // 1. Variable ka naam check karein (VITE_API_URL)
+        // 2. Double slash (//) ko single slash (/) karein agar URL ke baad slash nahi hai
+        const baseURL = import.meta.env.VITE_API_URL || "http://localhost:8000"; // Fallback add kiya hai
+
+        const res = await axios.get(`${baseURL}/api/v1/video/allVideos`, {
+            params: {
+                page: page,
+                limit: 20
+            }
+        });
+
+        // console.log("Videos Data:", res.data);
+        return res.data; // Data return karna zaroori hai
+    } catch (error) {
+        console.error("Error in get all video:", error.response?.data || error.message);
+        throw error;
+    }
+}
+

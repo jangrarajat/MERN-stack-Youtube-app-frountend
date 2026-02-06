@@ -22,7 +22,7 @@ function PhoneNavbar({setUploadVideoDiv , }) {
         <>
 
 
-            <div className=' fixed z-50 bg-gray-950  flex items-center justify-evenly bottom-0 w-full h-12  md:hidden'>
+            <div className=' fixed z-50 bg-[#0f0f0f]  flex items-center justify-evenly bottom-0 w-full h-12  md:hidden'>
                 <div className='flex flex-col justify-center items-center'>
                     <Link to='/home'>    <House /></Link>
                 </div>

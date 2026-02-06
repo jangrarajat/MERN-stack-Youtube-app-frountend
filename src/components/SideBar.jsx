@@ -18,7 +18,7 @@ function SideBar() {
 
   return (
     <>
-      <div className={` myDiv top-0  bg-gray-950 z-50 hidden  fixed ${menu ? "w-[20%]" : "w-[5%]"} md:flex flex-col  items-center pt-2 gap-5 h-full `}>
+      <div className={` myDiv top-0  bg-[#0f0f0f] z-50 hidden  fixed ${menu ? "w-[20%]" : "w-[5%]"} md:flex flex-col  items-center pt-2 gap-5 h-full `}>
         {menu ?
           (<>
             <div className=' flex flex-row items-center justify-evenly h-16 w-full '>

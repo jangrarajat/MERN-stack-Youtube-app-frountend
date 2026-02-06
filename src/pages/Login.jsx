@@ -68,7 +68,7 @@ function Login() {
             required
             name='email'
             placeholder='Enter email '
-            className='pl-3 mb-5 bg-gray-950 rounded p-2 border  border-white'
+            className='pl-3 mb-5 bg-gray-950  rounded p-2 border  border-white'
           />
 
 

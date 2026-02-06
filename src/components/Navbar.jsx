@@ -40,7 +40,7 @@ function navbar() {
     return (
         <>
       
-            <div className=' h-14   flex justify-between text-white items-center  px-2 md:px-10 fixed w-full'>
+            <div className=' h-14   flex justify-between text-white items-center bg-[#0f0f0f]  px-2 md:px-10 fixed w-full z-50'>
                 <Link to='/dashbord'>
                     <div className='md:ml-10 h-fit w-fit flex flex-row justify-center items-center md:gap-5'>
 
